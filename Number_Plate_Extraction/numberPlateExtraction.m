@@ -48,8 +48,8 @@ if ~isempty(r) % If succesfully indices of desired boxes are achieved.
         end
         noPlate=[noPlate letter]; % Appending every subsequent character in noPlate variable.
     end
-    fid = fopen('noPlate.txt', 'wt'); % This portion of code writes the number plate
-    printf(fid,'%s\n',noPlate);      % to the text file, if executed a notepad file with the
+    fid = fopen('noPlate.txt', 'w+'); % This portion of code writes the number plate
+    fprintf(fid,'%s\n',noPlate);      % to the text file, if executed a notepad file with the
     fclose(fid);                      % name noPlate.txt will be open with the number plate written.
     winopen('noPlate.txt')
     
